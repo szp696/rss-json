@@ -1,28 +1,20 @@
 #rss {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     background-color: bisque; 
-    flex: 2;
-}
-
-
-.article {
-    width: 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-auto-rows: minmax(10rem, auto);
 }
 @media screen and (max-width: 768px) {
-    .article {
-        width: 50%;
+    #rss {
+        grid-template-columns: 1fr 1fr;
     }
     
 }
-.article {
-    width: 33.33%;
-}
+
 @media screen and (max-width: 450px) {
-    .article {
-        width: 100%;
-    }
-    
+
 }
 
 
@@ -51,8 +43,8 @@ body {
     padding: 0;
 }
 #main {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 aside {
     flex: 1;
